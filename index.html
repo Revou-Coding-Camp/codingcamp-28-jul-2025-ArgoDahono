@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+    }
+    .logo {
+      font-size: 24px;
+    }
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #0c76cd;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    nav a:hover {
+      background: #eaf6ff;
+    }
+    .hero {
+      text-align: center;
+      padding: 50px 0 30px 0;
+    }
+    .hero h1 {
+      margin-bottom: 10px;
+    }
+    .hero p {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .hero .image-placeholder {
+      height: 200px;
+      border: 1px dashed #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 18px;
+    }
+    .headquarter {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 0;
+    }
+    .locations {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .location {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #333;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      background: #fff;
+    }
+    .contact {
+      display: flex;
+      justify-content: space-around;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      background: #fff;
+      padding: 0;
+    }
+    .contact label {
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+    .contact input, .contact select, .contact textarea {
+      margin-bottom: 10px;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .contact textarea {
+      resize: vertical;
+      min-height: 50px;
+    }
+    .contact button {
+      padding: 10px;
+      background: #0c76cd;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .contact button:hover {
+      background: #095a9d;
+    }
+    .info {
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 300px;
+      background: #fff;
+      font-size: 14px;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+      background: #fff;
+      font-size: 14px;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+
+  <!-- Header Content -->
+    <header class="main-header p-[2px]">
+        <!-- Logo Icon -->
+        <div class="logo rounded-[25%] h-[10px] w-[25px]"></div>
+        <h1 class="logo-text text-[12px] font-bold">Guntur Website</h1>
+
+    <!-- Navigation Menu -->
+    <nav>
+      <a class="border rounded-[4px] px-[8px] py-[4px]" href="#">Home</a>
+      <a class="border rounded-[4px] px-[8px] py-[4px]" href="#">Our Profile</a>
+      <a class="border rounded-[4px] px-[8px] py-[4px]" href="#">Portfolio</a>
+      <a class="border rounded-[4px] px-[8px] py-[4px]" href="#">Message Us</a>
+    </nav>
+  </header>
+
+  <hr />
+
+  <!--main content-->
+<main>
+  <!--home section-->
+  <section class="p-[16px]" id="home">
+     <h1 class="text-[24px] font-bold">Welcome <span id="welcome-speech"></span> to Our Website</h1>
+    <p>Ini adalah website interaksi pertama</p>
+    <div class="h-[500px] banner-img"></div>
+  </section>
+
+<hr />
+
+  <!--Our profile section-->
+  <section class="p-[16px]" id="our profile">
+    <h1>Our Profile</h1>
+    <div class="locations">
+      <div class="location">Jakarta</div>
+      <div class="location">Semarang</div>
+      <div class="location">Surabaya</div>
+    </div>
+  </section>
+
+<hr />
+
+  <!--Portfolio section-->
+  <section class="p-[16px]" id="portfolio">
+    <h1>Portfolio</h1>
+    <p>Ini adalah portfolio kami</p>
+    <div class="image-placeholder">Image Placeholder</div>
+    
+  </section>
+
+<hr />
+
+  <!--Message us section-->
+<section class="p-[16px]" id="message us">
+    <h1>Message Us</h1>
+    <p>Silakan isi form di bawah ini untuk mengirim pesan kepada kami.</p>
+    <section class="contact">
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Name" required />
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" placeholder="08xxxxxxx" required />
+
+      <label for="gender">Jenis Kelamin</label>
+      <select id="gender" required>
+        <option value="">-- Pilih --</option>
+        <option value="Laki-Laki">Laki-Laki</option>
+        <option value="Perempuan">Perempuan</option>
+      </select>
+
+      <label for="message">Pesan</label>
+      <textarea id="message" placeholder="Tulis pesan..." required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+      <aside class="min-h-[100px] flex-1 rounded-[4px] bg-blue-200">
+                    <p id="result-form"></p>
+                </aside>
+
+    <div class="info">
+      <p id="time"></p>
+      <p>Created by Guntur</p>
+      <p>Website Sederhana</p>
+    </div>
+  </section>
+  </section>
+</main>
+
+  <hr />
+  
+  <!-- Footer Content --> 
+
+  <footer>
+    &copy; Created by Guntur
+  </footer>
+
+  <script>
+    // Tampilkan waktu sekarang
+    const timeElem = document.getElementById("time");
+    const now = new Date();
+    timeElem.textContent = `Current time: ${now.toLocaleString()}`;
+
+    // Validasi form agar tidak boleh kosong
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e) {
+      const name = form.querySelector('#name').value.trim();
+      const phone = form.querySelector('#phone').value.trim();
+      const gender = form.querySelector('#gender').value.trim();
+      const message = form.querySelector('#message').value.trim();
+
+      if (!name || !phone || !gender || !message) {
+        alert('Semua field harus diisi!');
+        e.preventDefault();
+      }
+    });
+  </script>
+
+<!-- Javascript External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
+
+</body>
+</html>
